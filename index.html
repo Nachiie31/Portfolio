@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jonathan Sarmiento — Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <div class="nav-brand">JS</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#about" onclick="toggleMenu()">About</a>
+      <a href="#projects" onclick="toggleMenu()">Projects</a>
+      <a href="#skills" onclick="toggleMenu()">Skills</a>
+      <a href="#contact" onclick="toggleMenu()">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-greeting">Hi there, I'm</p>
+        <h1 class="hero-name">Jonathan<br/>Sarmiento</h1>
+        <p class="hero-title">Backend Developer · Manual QA · QA Engineer</p>
+        <p class="hero-bio">I build reliable web applications and make sure they work perfectly. Passionate about clean code, thorough testing, and delivering quality software.</p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn-primary">View my work</a>
+          <a href="#contact" class="btn-secondary">Get in touch</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/Nachiie31" target="_blank" class="social-link">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/sarmiento-jonathan-g-3458b527a" target="_blank" class="social-link">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="avatar-box">
+          <div class="avatar-initials">JS</div>
+        </div>
+        <div class="hero-card">
+          <div class="card-row">
+            <span class="card-dot green"></span>
+            <span class="card-text">Available for work</span>
+          </div>
+          <div class="card-row">
+            <span class="card-dot blue"></span>
+            <span class="card-text">Backend Developer</span>
+          </div>
+          <div class="card-row">
+            <span class="card-dot purple"></span>
+            <span class="card-text">QA Engineer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="section-inner">
+      <p class="section-label">About me</p>
+      <h2 class="section-title">Who I am</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm Jonathan, a Backend Developer and QA Engineer based in the Philippines. I specialize in building reliable web applications from the ground up — from setting up servers and databases to making sure everything works perfectly through thorough testing.</p>
+          <p>I recently built <strong>TaskFlow</strong>, a full-stack task management application with user authentication, a REST API, Supabase database, and Stripe payment integration — all deployed live on Vercel.</p>
+          <p>On the QA side, I have hands-on experience with manual testing, API testing using Postman, bug tracking with Jira, automated testing with Playwright, and CI/CD pipelines using GitHub Actions.</p>
+          <p>I'm passionate about writing clean, maintainable code and delivering software that users can rely on.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-number">1</div>
+            <div class="stat-label">Live Project</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">39</div>
+            <div class="stat-label">Automated Tests</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">43</div>
+            <div class="stat-label">Test Cases Written</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">7</div>
+            <div class="stat-label">API Tests</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills" id="skills">
+    <div class="section-inner">
+      <p class="section-label">Skills</p>
+      <h2 class="section-title">What I work with</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Backend</h3>
+          <div class="skill-tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">Express.js</span>
+            <span class="tag">REST API</span>
+            <span class="tag">VB.NET</span>
+            <span class="tag">C# (Learning)</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Frontend</h3>
+          <div class="skill-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Responsive Design</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Database</h3>
+          <div class="skill-tags">
+            <span class="tag">Supabase</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">SQL</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>QA & Testing</h3>
+          <div class="skill-tags">
+            <span class="tag">Manual QA</span>
+            <span class="tag">Playwright</span>
+            <span class="tag">Postman</span>
+            <span class="tag">Jira</span>
+            <span class="tag">Test Cases</span>
+            <span class="tag">Bug Reports</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Tools & DevOps</h3>
+          <div class="skill-tags">
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">GitHub Actions</span>
+            <span class="tag">Vercel</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Visual Studio</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Payments & Auth</h3>
+          <div class="skill-tags">
+            <span class="tag">Stripe</span>
+            <span class="tag">Supabase Auth</span>
+            <span class="tag">JWT</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects" id="projects">
+    <div class="section-inner">
+      <p class="section-label">Projects</p>
+      <h2 class="section-title">What I've built</h2>
+      <div class="projects-grid">
+
+        <div class="project-card featured">
+          <div class="project-header">
+            <div class="project-icon">📋</div>
+            <div class="project-links">
+              <a href="https://task-manager-omega-dun-q6erwfmg3x.vercel.app" target="_blank" class="project-link">Live ↗</a>
+              <a href="https://github.com/Nachiie31/task-manager" target="_blank" class="project-link">GitHub ↗</a>
+            </div>
+          </div>
+          <h3 class="project-name">TaskFlow</h3>
+          <p class="project-desc">A full-stack task management web application with user authentication, priority levels, due dates, categories, and Stripe payment integration for Pro upgrades.</p>
+          <div class="project-highlights">
+            <div class="highlight">✅ 39 automated Playwright tests</div>
+            <div class="highlight">✅ CI/CD with GitHub Actions</div>
+            <div class="highlight">✅ REST API with 4 endpoints</div>
+            <div class="highlight">✅ Supabase database + auth</div>
+            <div class="highlight">✅ Stripe payment integration</div>
+            <div class="highlight">✅ Mobile responsive</div>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">Express</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">Stripe</span>
+            <span class="tag">Playwright</span>
+            <span class="tag">Vercel</span>
+          </div>
+        </div>
+
+                <!-- POS Inventory System -->
+        <div class="project-card">
+        <div class="project-header">
+            <div class="project-icon">🛒</div>
+            <div class="project-links">
+            <a href="https://github.com/Nachiie31/Capstone-Project-POS-with-Inventory-System" target="_blank" class="project-link">GitHub ↗</a>
+            </div>
+        </div>
+        <h3 class="project-name">POS with Inventory System</h3>
+        <p class="project-desc">A Point of Sale and Inventory Management System developed as a capstone project. Helps small businesses manage sales transactions, track inventory, and generate basic sales reports.</p>
+        <div class="project-highlights">
+            <div class="highlight">✅ Product management (CRUD)</div>
+            <div class="highlight">✅ Inventory tracking</div>
+            <div class="highlight">✅ Sales transactions & POS</div>
+            <div class="highlight">✅ User login system</div>
+            <div class="highlight">✅ Sales summary reports</div>
+            <div class="highlight">✅ Installer version included</div>
+        </div>
+        <div class="project-tags">
+            <span class="tag">VB.NET</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">Visual Studio</span>
+            <span class="tag">Capstone Project</span>
+        </div>
+        </div>
+
+        <!-- Placeholder for future projects -->
+        <div class="project-card coming-soon">
+          <div class="project-header">
+            <div class="project-icon">🚀</div>
+          </div>
+          <h3 class="project-name">Next Project</h3>
+          <p class="project-desc">Currently learning C# and ASP.NET Core. Next project will be built with a C# backend and Azure SQL database.</p>
+          <div class="project-tags">
+            <span class="tag">C#</span>
+            <span class="tag">ASP.NET Core</span>
+            <span class="tag">Azure SQL</span>
+            <span class="tag">Coming soon</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="section-inner">
+      <p class="section-label">Contact</p>
+      <h2 class="section-title">Get in touch</h2>
+      <p class="contact-sub">Have a project in mind or want to work together? Send me a message and I'll get back to you!</p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div>
+              <p class="contact-label">Email</p>
+              <a href="mailto:jonathan.galsim.sarmiento@gmail.com">jonathan.galsim.sarmiento@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">💼</span>
+            <div>
+              <p class="contact-label">LinkedIn</p>
+              <a href="https://www.linkedin.com/in/sarmiento-jonathan-g-3458b527a" target="_blank">sarmiento-jonathan-g</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🐙</span>
+            <div>
+              <p class="contact-label">GitHub</p>
+              <a href="https://github.com/Nachiie31" target="_blank">Nachiie31</a>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/mwvzpnae" method="POST">
+          <div class="form-group">
+            <label>Your name</label>
+            <input type="text" name="name" placeholder="John Doe" required/>
+          </div>
+          <div class="form-group">
+            <label>Your email</label>
+            <input type="email" name="email" placeholder="john@example.com" required/>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <div id="form-status" style="display:none;"></div>
+          <button type="submit" class="btn-primary" id="submit-btn">Send message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 Jonathan Sarmiento. Built with HTML, CSS & JavaScript.</p>
+      <div class="footer-links">
+        <a href="https://github.com/Nachiie31" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/sarmiento-jonathan-g-3458b527a" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
