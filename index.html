@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+<body>
 
   <!-- Navbar -->
   <nav class="navbar" id="navbar">
@@ -24,7 +25,6 @@
       </div>
       <button class="nav-toggle" onclick="toggleMenu()">☰</button>
     </div>
-    <!-- Mobile menu -->
     <div class="mobile-menu" id="mobile-menu">
       <a href="#about" onclick="toggleMenu()">About</a>
       <a href="#projects" onclick="toggleMenu()">Projects</a>
@@ -39,8 +39,8 @@
       <div class="hero-text">
         <p class="hero-greeting">Hi there, I'm</p>
         <h1 class="hero-name">Jonathan<br/>Sarmiento</h1>
-        <p class="hero-title">Backend Developer · Manual QA · QA Engineer</p>
-        <p class="hero-bio">I build reliable web applications and make sure they work perfectly. Passionate about clean code, thorough testing, and delivering quality software.</p>
+        <p class="hero-title">Software Developer · Backend Developer · QA Engineer</p>
+        <p class="hero-bio">I build reliable, full-stack web applications and make sure they work perfectly. Passionate about clean code, thorough testing, and delivering quality software that solves real problems.</p>
         <div class="hero-btns">
           <a href="#projects" class="btn-primary">View my work</a>
           <a href="#contact" class="btn-secondary">Get in touch</a>
@@ -58,7 +58,7 @@
       </div>
       <div class="hero-visual">
         <div class="avatar-box">
-            <img src="profile.jpg" alt="Jonathan Sarmiento" style="width:100%; height:100%; object-fit:cover; border-radius:24px;"/>
+          <img src="profile.jpg" alt="Jonathan Sarmiento" style="width:100%; height:100%; object-fit:cover; border-radius:24px;"/>
         </div>
         <div class="hero-card">
           <div class="card-row">
@@ -67,7 +67,7 @@
           </div>
           <div class="card-row">
             <span class="card-dot blue"></span>
-            <span class="card-text">Backend Developer</span>
+            <span class="card-text">Full-Stack Developer</span>
           </div>
           <div class="card-row">
             <span class="card-dot purple"></span>
@@ -85,16 +85,16 @@
       <h2 class="section-title">Who I am</h2>
       <div class="about-grid">
         <div class="about-text">
-  <p>I'm Jonathan, an entry-level Backend Developer and QA Engineer based in the Philippines, currently building my skills and portfolio through hands-on projects and self-directed learning.</p>
-  <p>I'm passionate about the full development cycle — from setting up servers and databases to ensuring everything works through thorough testing. I believe great software isn't just built, it's verified.</p>
-  <p>As a self-taught developer, I recently completed <strong>TaskFlow</strong> — a full-stack task management application I built from scratch, featuring user authentication, a REST API, Supabase PostgreSQL database, and Stripe payment integration, fully deployed live on Vercel.</p>
-  <p>On the QA side, I have practical experience writing manual test cases, API testing with Postman, bug tracking in Jira, end-to-end automated testing with Playwright, and CI/CD pipeline integration using GitHub Actions — with 39 automated tests running on every code push.</p>
-  <p>I'm eager to grow, contribute, and bring dedication and attention to detail to any team I join.</p>
-</div>
+          <p>I'm <strong>Jonathan</strong>, a software developer and QA Engineer based in the Philippines, building my skills and portfolio through hands-on projects and self-directed learning.</p>
+          <p>I'm passionate about the full development cycle — from designing databases and writing server logic, to crafting clean interfaces and ensuring everything works through thorough testing. I believe great software isn't just built, it's verified.</p>
+          <p>My latest project is <strong>LearningHub</strong> — a complete online learning platform I built from scratch using Next.js 14, Supabase, and Vercel. It features role-based access for admins, teachers, and students, lesson delivery in multiple formats, auto-graded tests, focus-lock during exams, and real-time performance tracking.</p>
+          <p>I also built <strong>TaskFlow</strong> — a full-stack task management app with user authentication, a REST API, Supabase PostgreSQL database, and Stripe payment integration, backed by 39 automated Playwright tests running on every code push via GitHub Actions CI/CD.</p>
+          <p>I'm eager to grow, contribute, and bring dedication and attention to detail to any team I join.</p>
+        </div>
         <div class="about-stats">
           <div class="stat-card">
-            <div class="stat-number">1</div>
-            <div class="stat-label">Live Project</div>
+            <div class="stat-number">3</div>
+            <div class="stat-label">Live Projects</div>
           </div>
           <div class="stat-card">
             <div class="stat-number">39</div>
@@ -105,8 +105,8 @@
             <div class="stat-label">Test Cases Written</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">7</div>
-            <div class="stat-label">API Tests</div>
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Features Shipped</div>
           </div>
         </div>
       </div>
@@ -120,35 +120,40 @@
       <h2 class="section-title">What I work with</h2>
       <div class="skills-grid">
         <div class="skill-group">
-          <h3>Backend</h3>
+          <h3>🖥 Frontend</h3>
+          <div class="skill-tags">
+            <span class="tag">Next.js 14</span>
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>⚙️ Backend</h3>
           <div class="skill-tags">
             <span class="tag">Node.js</span>
             <span class="tag">Express.js</span>
             <span class="tag">REST API</span>
+            <span class="tag">Next.js API Routes</span>
             <span class="tag">VB.NET</span>
             <span class="tag">C# (Learning)</span>
           </div>
         </div>
         <div class="skill-group">
-          <h3>Frontend</h3>
-          <div class="skill-tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Responsive Design</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3>Database</h3>
+          <h3>🗄 Database</h3>
           <div class="skill-tags">
             <span class="tag">Supabase</span>
             <span class="tag">PostgreSQL</span>
+            <span class="tag">Row Level Security</span>
             <span class="tag">SQLite</span>
             <span class="tag">SQL</span>
           </div>
         </div>
         <div class="skill-group">
-          <h3>QA & Testing</h3>
+          <h3>🧪 QA & Testing</h3>
           <div class="skill-tags">
             <span class="tag">Manual QA</span>
             <span class="tag">Playwright</span>
@@ -159,7 +164,7 @@
           </div>
         </div>
         <div class="skill-group">
-          <h3>Tools & DevOps</h3>
+          <h3>🚀 Tools & DevOps</h3>
           <div class="skill-tags">
             <span class="tag">Git</span>
             <span class="tag">GitHub</span>
@@ -170,11 +175,12 @@
           </div>
         </div>
         <div class="skill-group">
-          <h3>Payments & Auth</h3>
+          <h3>💳 Auth & Payments</h3>
           <div class="skill-tags">
-            <span class="tag">Stripe</span>
             <span class="tag">Supabase Auth</span>
+            <span class="tag">Stripe</span>
             <span class="tag">JWT</span>
+            <span class="tag">Role-Based Access</span>
           </div>
         </div>
       </div>
@@ -188,6 +194,39 @@
       <h2 class="section-title">What I've built</h2>
       <div class="projects-grid">
 
+        <!-- LearningHub — NEW FEATURED -->
+        <div class="project-card featured">
+          <div class="project-header">
+            <div class="project-icon">🎓</div>
+            <div class="project-links">
+              <a href="https://learning-platform-two-kappa.vercel.app/" target="_blank" class="project-link">Live ↗</a>
+              <a href="https://github.com/Nachiie31/learning-platform" target="_blank" class="project-link">GitHub ↗</a>
+            </div>
+          </div>
+          <div class="project-badge">⭐ Latest Project</div>
+          <h3 class="project-name">LearningHub</h3>
+          <p class="project-desc">A complete full-stack online learning platform built with Next.js 14, Supabase, and Vercel. Features role-based dashboards for admins, teachers, and students with full lesson delivery and auto-graded test system.</p>
+          <div class="project-highlights">
+            <div class="highlight">✅ Admin, Teacher & Student role-based dashboards</div>
+            <div class="highlight">✅ Lesson types: text, video, image, slideshow</div>
+            <div class="highlight">✅ Auto-graded tests with answer key (hidden from students)</div>
+            <div class="highlight">✅ Focus-lock during tests — tab switch & copy/paste detection</div>
+            <div class="highlight">✅ Test timer, deadline, and retake control</div>
+            <div class="highlight">✅ Question bank for reusable questions across topics</div>
+            <div class="highlight">✅ Export CSV & print test results</div>
+            <div class="highlight">✅ Course → Year Level → Section academic structure</div>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Next.js 14</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Vercel</span>
+          </div>
+        </div>
+
+        <!-- TaskFlow -->
         <div class="project-card featured">
           <div class="project-header">
             <div class="project-icon">📋</div>
@@ -216,33 +255,33 @@
           </div>
         </div>
 
-                <!-- POS Inventory System -->
+        <!-- POS Inventory System -->
         <div class="project-card">
-        <div class="project-header">
+          <div class="project-header">
             <div class="project-icon">🛒</div>
             <div class="project-links">
-            <a href="https://github.com/Nachiie31/Capstone-Project-POS-with-Inventory-System" target="_blank" class="project-link">GitHub ↗</a>
+              <a href="https://github.com/Nachiie31/Capstone-Project-POS-with-Inventory-System" target="_blank" class="project-link">GitHub ↗</a>
             </div>
-        </div>
-        <h3 class="project-name">Point-Of-Sale with Inventory System</h3>
-        <p class="project-desc">A Point of Sale and Inventory Management System developed as a capstone project. Helps small businesses manage sales transactions, track inventory, and generate basic sales reports.</p>
-        <div class="project-highlights">
+          </div>
+          <h3 class="project-name">Point-Of-Sale with Inventory System</h3>
+          <p class="project-desc">A Point of Sale and Inventory Management System developed as a capstone project. Helps small businesses manage sales transactions, track inventory, and generate basic sales reports.</p>
+          <div class="project-highlights">
             <div class="highlight">✅ Product management (CRUD)</div>
             <div class="highlight">✅ Inventory tracking</div>
             <div class="highlight">✅ Sales transactions & POS</div>
             <div class="highlight">✅ User login system</div>
             <div class="highlight">✅ Sales summary reports</div>
             <div class="highlight">✅ Installer version included</div>
-        </div>
-        <div class="project-tags">
+          </div>
+          <div class="project-tags">
             <span class="tag">VB.NET</span>
             <span class="tag">SQLite</span>
             <span class="tag">Visual Studio</span>
             <span class="tag">Capstone Project</span>
-        </div>
+          </div>
         </div>
 
-        <!-- Placeholder for future projects -->
+        <!-- Coming soon -->
         <div class="project-card coming-soon">
           <div class="project-header">
             <div class="project-icon">🚀</div>
@@ -267,7 +306,6 @@
       <p class="section-label">Contact</p>
       <h2 class="section-title">Get in touch</h2>
       <p class="contact-sub">Have a project in mind or want to work together? Send me a message and I'll get back to you!</p>
-
       <div class="contact-grid">
         <div class="contact-info">
           <div class="contact-item">
