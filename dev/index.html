@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jonathan Sarmiento — Developer</title>
+<link rel="icon" type="image/png" href="../favicon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="dev">
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-mark"><span class="dot"></span>JONATHAN SARMIENTO</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">Home</a>
+      <a href="index.html" class="current">Developer</a>
+      <a href="../qa/index.html">QA</a>
+      <a href="#contact" class="pill">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="hero">
+    <div class="eyebrow">Developer Portfolio</div>
+    <h1 class="name">Full-Stack Developer</h1>
+    <div class="role-line">Next.js &amp; Node.js  ·  <span>Supabase / PostgreSQL</span>  ·  REST APIs  ·  Stripe  ·  Test Automation</div>
+    <p class="hero-summary">
+      Self-taught full-stack developer based in the Philippines. I build complete applications — database schema, backend logic, and frontend UI — and ship them to production. I also write automated test suites and CI/CD pipelines for my own projects, because I'd rather catch a regression in a GitHub Action than have a user find it first.
+    </p>
+    <div class="stat-strip">
+      <div class="stat"><div class="num">3</div><div class="label">Live production apps</div></div>
+      <div class="stat"><div class="num">39</div><div class="label">Automated Playwright tests</div></div>
+      <div class="stat"><div class="num">4+</div><div class="label">REST API integrations shipped</div></div>
+      <div class="stat"><div class="num">15+</div><div class="label">Features shipped end-to-end</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="tag">01</span><h2 class="section-title">Stack</h2></div>
+    <div class="skill-groups">
+      <div class="skill-card reveal">
+        <h3>Frontend</h3>
+        <div class="chip-row">
+          <span class="chip">Next.js 14</span><span class="chip">React</span><span class="chip">TypeScript</span>
+          <span class="chip">Tailwind CSS</span><span class="chip">HTML / CSS / JS</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Backend</h3>
+        <div class="chip-row">
+          <span class="chip">Node.js</span><span class="chip">Express.js</span><span class="chip">REST API design</span>
+          <span class="chip">Next.js API routes</span><span class="chip">VB.NET</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Database</h3>
+        <div class="chip-row">
+          <span class="chip">Supabase</span><span class="chip">PostgreSQL</span><span class="chip">Row Level Security</span>
+          <span class="chip">SQLite</span><span class="chip">SQL</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Auth &amp; Payments</h3>
+        <div class="chip-row">
+          <span class="chip">Supabase Auth</span><span class="chip">JWT</span><span class="chip">Role-based access</span><span class="chip">Stripe</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Test Automation</h3>
+        <div class="chip-row">
+          <span class="chip">Playwright</span><span class="chip">GitHub Actions CI/CD</span><span class="chip">Cross-browser test runs</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Tools</h3>
+        <div class="chip-row">
+          <span class="chip">Git / GitHub</span><span class="chip">Vercel</span><span class="chip">VS Code</span><span class="chip">Visual Studio</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="tag">02</span><h2 class="section-title">Latest build</h2></div>
+    <div class="termpanel reveal">
+      <div class="termbar">
+        <span class="d d1"></span><span class="d d2"></span><span class="d d3"></span>
+        <span class="tlabel">learninghub — deploy log</span>
+      </div>
+      <div class="termbody">
+        <div class="ln"><span class="prompt">$</span><span>next build</span></div>
+        <div class="ln"><span class="comment">// role-based dashboards: admin · teacher · student</span></div>
+        <div class="ln"><span class="ok">✓</span><span>auto-graded tests with hidden answer keys</span></div>
+        <div class="ln"><span class="ok">✓</span><span>focus-lock during exams — tab-switch &amp; copy/paste detection</span></div>
+        <div class="ln"><span class="ok">✓</span><span>question bank, timers, retake control</span></div>
+        <div class="ln"><span class="ok">✓</span><span>CSV export &amp; printable results</span></div>
+        <div class="ln"><span class="prompt">$</span><span>vercel --prod</span></div>
+        <div class="ln"><span class="ok">✓</span><span class="path">deployed → learning-platform-two-kappa.vercel.app</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card featured reveal">
+      <div class="proj-head">
+        <div>
+          <div class="proj-title">LearningHub</div>
+          <div class="proj-meta">Next.js 14 · Supabase · Vercel · 2026</div>
+        </div>
+        <div class="proj-links">
+          <a href="https://learning-platform-two-kappa.vercel.app/" target="_blank" rel="noopener">Live ↗</a>
+          <a href="https://github.com/Nachiie31/learning-platform" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+      <p class="proj-desc">A complete online learning platform with role-based access for admins, teachers, and students — lesson delivery in multiple formats, auto-graded tests, focus-lock during exams, and real-time performance tracking.</p>
+      <ul class="bullets">
+        <li>Built role-based dashboards and permissions for three distinct user types</li>
+        <li>Designed the course → year level → section academic data structure</li>
+        <li>Built an auto-graded testing system with question banks, timers, and retake controls</li>
+        <li>Implemented focus-lock security during exams (tab-switch and copy/paste detection)</li>
+      </ul>
+      <div class="stack-row">
+        <span class="chip">Next.js 14</span><span class="chip">TypeScript</span><span class="chip">Supabase</span>
+        <span class="chip">Tailwind CSS</span><span class="chip">PostgreSQL</span><span class="chip">Vercel</span>
+      </div>
+    </div>
+
+    <div class="proj-card featured reveal">
+      <div class="proj-head">
+        <div>
+          <div class="proj-title">TaskFlow</div>
+          <div class="proj-meta">Node.js · Express · Supabase · Stripe · 2026</div>
+        </div>
+        <div class="proj-links">
+          <a href="https://task-manager-omega-dun-q6erwfmg3x.vercel.app" target="_blank" rel="noopener">Live ↗</a>
+          <a href="https://github.com/Nachiie31/task-manager" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+      <p class="proj-desc">A full-stack task management app with authentication, priority levels, due dates, categories, and Stripe payment integration for Pro upgrades. I also tested this one thoroughly as QA — <a href="../qa/index.html" style="color:var(--accent-deep); border-bottom:1px solid var(--accent-deep);">see that side of it here</a>.</p>
+      <ul class="bullets">
+        <li>Built a REST API with authenticated endpoints for tasks, filters, and account actions</li>
+        <li>Integrated Supabase for auth and PostgreSQL data storage</li>
+        <li>Wired up Stripe checkout for Pro plan upgrades</li>
+        <li>Wrote 39 automated Playwright tests across Chromium and Firefox, running on every push via GitHub Actions CI/CD</li>
+      </ul>
+      <div class="stack-row">
+        <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">Supabase</span>
+        <span class="chip">Stripe</span><span class="chip">Playwright</span><span class="chip">Vercel</span>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-head">
+        <div>
+          <div class="proj-title">POS with Inventory System</div>
+          <div class="proj-meta">VB.NET · SQLite · Visual Studio · Capstone, 2024–2025</div>
+        </div>
+        <div class="proj-links">
+          <a href="https://github.com/Nachiie31/Capstone-Project-POS-with-Inventory-System" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+      <p class="proj-desc">A point-of-sale and inventory management system built as a capstone project, helping small businesses manage sales transactions, track inventory, and generate sales reports.</p>
+      <ul class="bullets">
+        <li>Built product management (CRUD), inventory tracking, and a user login system</li>
+        <li>Implemented sales transaction processing and summary reporting</li>
+        <li>Packaged a Windows installer version for distribution</li>
+      </ul>
+      <div class="stack-row">
+        <span class="chip">VB.NET</span><span class="chip">SQLite</span><span class="chip">Visual Studio</span>
+      </div>
+    </div>
+
+    <div class="proj-card reveal" style="opacity:0.75;">
+      <div class="proj-head">
+        <div>
+          <div class="proj-title">Next up</div>
+          <div class="proj-meta">C# · ASP.NET Core · Azure SQL</div>
+        </div>
+      </div>
+      <p class="proj-desc">Currently learning C# and ASP.NET Core. Next project will run on a C# backend with an Azure SQL database.</p>
+    </div>
+  </section>
+</div>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="contact-inner">
+      <div class="contact-cta">
+        <h2>Looking for a full-stack developer?</h2>
+        <p>Open to developer roles. Happy to walk through the architecture or code for any project above.</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:jonathan.galsim.sarmiento@gmail.com">jonathan.galsim.sarmiento@gmail.com</a>
+        <a href="tel:+639942786573">+63 994 278 6573</a>
+        <a href="https://github.com/Nachiie31" target="_blank" rel="noopener">github.com/Nachiie31</a>
+        <a href="https://www.linkedin.com/in/sarmiento-jonathan-g-3458b527a" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="foot-line">
+      <span>Manila, Philippines</span>
+      <span>Developer Portfolio · <a href="../qa/index.html" style="text-decoration:underline;">See QA work →</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

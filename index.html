@@ -1,367 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jonathan Sarmiento — Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-  <link rel="icon" type="image/png" href="favicon.png"/>
-  <link rel="apple-touch-icon" href="favicon.png"/>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jonathan Sarmiento — Developer & QA Tester</title>
+<link rel="icon" type="image/png" href="favicon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page="home">
 
-  <!-- Navbar -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-inner">
-      <div class="nav-brand">JS</div>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <button class="nav-toggle" onclick="toggleMenu()">☰</button>
-    </div>
-    <div class="mobile-menu" id="mobile-menu">
-      <a href="#about" onclick="toggleMenu()">About</a>
-      <a href="#projects" onclick="toggleMenu()">Projects</a>
-      <a href="#skills" onclick="toggleMenu()">Skills</a>
-      <a href="#contact" onclick="toggleMenu()">Contact</a>
-    </div>
-  </nav>
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-mark"><span class="dot"></span>JONATHAN SARMIENTO</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="current">Home</a>
+      <a href="dev/index.html">Developer</a>
+      <a href="qa/index.html">QA</a>
+      <a href="#contact" class="pill">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
 
-  <!-- Hero -->
-  <section class="hero" id="home">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <p class="hero-greeting">Hi there, I'm</p>
-        <h1 class="hero-name">Jonathan<br/>Sarmiento</h1>
-        <p class="hero-title">Software Developer · Backend Developer · QA Engineer</p>
-        <p class="hero-bio">I build reliable, full-stack web applications and make sure they work perfectly. Passionate about clean code, thorough testing, and delivering quality software that solves real problems.</p>
-        <div class="hero-btns">
-          <a href="#projects" class="btn-primary">View my work</a>
-          <a href="#contact" class="btn-secondary">Get in touch</a>
-        </div>
-        <div class="hero-socials">
-          <a href="https://github.com/Nachiie31" target="_blank" class="social-link">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/sarmiento-jonathan-g-3458b527a" target="_blank" class="social-link">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            LinkedIn
-          </a>
+<div class="wrap">
+  <section class="home-hero">
+    <div class="home-hero-grid">
+      <div>
+        <div class="eyebrow">Portfolio</div>
+        <h1 class="home-name">Jonathan Sarmiento</h1>
+        <div class="home-role">I build applications — <span class="b">then I test them properly.</span></div>
+        <p class="home-bio">
+          I'm a self-taught full-stack developer from the Philippines who also does manual QA work — mostly on my own projects, and I'm looking to bring that same habit to a team. I write the backend, wire up the database, and ship the feature. Then I put on a QA hat: write test cases, break what I built, log the bugs properly, and re-test until it's actually solid. Most developers skip that second half. I don't.
+        </p>
+        <div style="display:flex; gap:14px; flex-wrap:wrap;">
+          <a href="dev/index.html" class="btn primary">Developer work →</a>
+          <a href="qa/index.html" class="btn">QA work →</a>
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="avatar-box">
-          <img src="profile.jpg" alt="Jonathan Sarmiento" style="width:100%; height:100%; object-fit:cover; border-radius:24px;"/>
+      <div class="home-avatar reveal">
+        <img src="profile.jpg" alt="Jonathan Sarmiento">
+      </div>
+    </div>
+
+    <div class="metric-strip reveal">
+      <div class="metric"><div class="num">3</div><div class="label">Live applications built</div></div>
+      <div class="metric"><div class="num">45</div><div class="label">Manual test cases written</div></div>
+      <div class="metric"><div class="num">39</div><div class="label">Automated tests written</div></div>
+      <div class="metric"><div class="num">15</div><div class="label">Bugs found, fixed & closed</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="tag">01</span><h2 class="section-title">Two ways to see my work</h2></div>
+    <div class="path-grid">
+      <a href="dev/index.html" class="path-card dev reveal">
+        <div class="path-accent"></div>
+        <h3>Developer</h3>
+        <p>Full-stack builds — Next.js, Supabase, REST APIs, payments, and the automated test suites and CI/CD pipelines that ship alongside them.</p>
+        <div class="path-stats">
+          <div><b>3</b>projects</div>
+          <div><b>39</b>automated tests</div>
         </div>
-        <div class="hero-card">
-          <div class="card-row">
-            <span class="card-dot green"></span>
-            <span class="card-text">Available for work</span>
-          </div>
-          <div class="card-row">
-            <span class="card-dot blue"></span>
-            <span class="card-text">Full-Stack Developer</span>
-          </div>
-          <div class="card-row">
-            <span class="card-dot purple"></span>
-            <span class="card-text">QA Engineer</span>
-          </div>
+        <span class="go">See the developer portfolio →</span>
+      </a>
+      <a href="qa/index.html" class="path-card qa reveal">
+        <div class="path-accent"></div>
+        <h3>QA Tester</h3>
+        <p>Manual test planning, functional and regression testing, Jira bug tracking, and manual API testing with Postman.</p>
+        <div class="path-stats">
+          <div><b>45</b>test cases</div>
+          <div><b>15</b>bugs logged</div>
+        </div>
+        <span class="go">See the QA portfolio →</span>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="tag">02</span><h2 class="section-title">Built it, then broke it: TaskFlow</h2></div>
+    <div class="thru-card reveal">
+      <div class="thru-icon">TF</div>
+      <div>
+        <div class="thru-title">TaskFlow — task management web app</div>
+        <div class="thru-desc">A full-stack app with auth, a REST API, a Supabase database, and Stripe payments — the one project that shows both sides of how I work.</div>
+        <div class="thru-tags">
+          <a href="https://task-manager-omega-dun-q6erwfmg3x.vercel.app" target="_blank" rel="noopener">Live site ↗</a>
+          <a href="https://github.com/Nachiie31/task-manager" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+        <div class="thru-split">
+          <div class="as-dev">AS DEVELOPER — built the API, auth &amp; Stripe integration, wrote 39 automated Playwright tests</div>
+          <div class="as-qa">AS QA — wrote &amp; ran 45 manual test cases, found and closed 15 bugs</div>
         </div>
       </div>
     </div>
   </section>
+</div>
 
-  <!-- About -->
-  <section class="about" id="about">
-    <div class="section-inner">
-      <p class="section-label">About me</p>
-      <h2 class="section-title">Who I am</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>I'm <strong>Jonathan</strong>, a software developer and QA Engineer based in the Philippines, building my skills and portfolio through hands-on projects and self-directed learning.</p>
-          <p>I'm passionate about the full development cycle — from designing databases and writing server logic, to crafting clean interfaces and ensuring everything works through thorough testing. I believe great software isn't just built, it's verified.</p>
-          <p>My latest project is <strong>LearningHub</strong> — a complete online learning platform I built from scratch using Next.js 14, Supabase, and Vercel. It features role-based access for admins, teachers, and students, lesson delivery in multiple formats, auto-graded tests, focus-lock during exams, and real-time performance tracking.</p>
-          <p>I also built <strong>TaskFlow</strong> — a full-stack task management app with user authentication, a REST API, Supabase PostgreSQL database, and Stripe payment integration, backed by 39 automated Playwright tests running on every code push via GitHub Actions CI/CD.</p>
-          <p>I'm eager to grow, contribute, and bring dedication and attention to detail to any team I join.</p>
-        </div>
-        <div class="about-stats">
-          <div class="stat-card">
-            <div class="stat-number">3</div>
-            <div class="stat-label">Live Projects</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">39</div>
-            <div class="stat-label">Automated Tests</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">43</div>
-            <div class="stat-label">Test Cases Written</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">15+</div>
-            <div class="stat-label">Features Shipped</div>
-          </div>
-        </div>
+<footer id="contact">
+  <div class="wrap">
+    <div class="contact-inner">
+      <div class="contact-cta">
+        <h2>Let's talk about your team.</h2>
+        <p>Open to developer and QA roles. Happy to walk through any project above in more detail.</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:jonathan.galsim.sarmiento@gmail.com">jonathan.galsim.sarmiento@gmail.com</a>
+        <a href="tel:+639942786573">+63 994 278 6573</a>
+        <a href="https://github.com/Nachiie31" target="_blank" rel="noopener">github.com/Nachiie31</a>
+        <a href="https://www.linkedin.com/in/sarmiento-jonathan-g-3458b527a" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
-  </section>
-
-  <!-- Skills -->
-  <section class="skills" id="skills">
-    <div class="section-inner">
-      <p class="section-label">Skills</p>
-      <h2 class="section-title">What I work with</h2>
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h3>🖥 Frontend</h3>
-          <div class="skill-tags">
-            <span class="tag">Next.js 14</span>
-            <span class="tag">React</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">Tailwind CSS</span>
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3>⚙️ Backend</h3>
-          <div class="skill-tags">
-            <span class="tag">Node.js</span>
-            <span class="tag">Express.js</span>
-            <span class="tag">REST API</span>
-            <span class="tag">Next.js API Routes</span>
-            <span class="tag">VB.NET</span>
-            <span class="tag">C# (Learning)</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3>🗄 Database</h3>
-          <div class="skill-tags">
-            <span class="tag">Supabase</span>
-            <span class="tag">PostgreSQL</span>
-            <span class="tag">Row Level Security</span>
-            <span class="tag">SQLite</span>
-            <span class="tag">SQL</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3>🧪 QA & Testing</h3>
-          <div class="skill-tags">
-            <span class="tag">Manual QA</span>
-            <span class="tag">Playwright</span>
-            <span class="tag">Postman</span>
-            <span class="tag">Jira</span>
-            <span class="tag">Test Cases</span>
-            <span class="tag">Bug Reports</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3>🚀 Tools & DevOps</h3>
-          <div class="skill-tags">
-            <span class="tag">Git</span>
-            <span class="tag">GitHub</span>
-            <span class="tag">GitHub Actions</span>
-            <span class="tag">Vercel</span>
-            <span class="tag">VS Code</span>
-            <span class="tag">Visual Studio</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3>💳 Auth & Payments</h3>
-          <div class="skill-tags">
-            <span class="tag">Supabase Auth</span>
-            <span class="tag">Stripe</span>
-            <span class="tag">JWT</span>
-            <span class="tag">Role-Based Access</span>
-          </div>
-        </div>
-      </div>
+    <div class="foot-line">
+      <span>Manila, Philippines</span>
+      <span>Developer & QA Portfolio</span>
     </div>
-  </section>
+  </div>
+</footer>
 
-  <!-- Projects -->
-  <section class="projects" id="projects">
-    <div class="section-inner">
-      <p class="section-label">Projects</p>
-      <h2 class="section-title">What I've built</h2>
-      <div class="projects-grid">
-
-        <!-- LearningHub — NEW FEATURED -->
-        <div class="project-card featured">
-          <div class="project-header">
-            <div class="project-icon">🎓</div>
-            <div class="project-links">
-              <a href="https://learning-platform-two-kappa.vercel.app/" target="_blank" class="project-link">Live ↗</a>
-              <a href="https://github.com/Nachiie31/learning-platform" target="_blank" class="project-link">GitHub ↗</a>
-            </div>
-          </div>
-          <div class="project-badge">⭐ Latest Project</div>
-          <h3 class="project-name">LearningHub</h3>
-          <p class="project-desc">A complete full-stack online learning platform built with Next.js 14, Supabase, and Vercel. Features role-based dashboards for admins, teachers, and students with full lesson delivery and auto-graded test system.</p>
-          <div class="project-highlights">
-            <div class="highlight">✅ Admin, Teacher & Student role-based dashboards</div>
-            <div class="highlight">✅ Lesson types: text, video, image, slideshow</div>
-            <div class="highlight">✅ Auto-graded tests with answer key (hidden from students)</div>
-            <div class="highlight">✅ Focus-lock during tests — tab switch & copy/paste detection</div>
-            <div class="highlight">✅ Test timer, deadline, and retake control</div>
-            <div class="highlight">✅ Question bank for reusable questions across topics</div>
-            <div class="highlight">✅ Export CSV & print test results</div>
-            <div class="highlight">✅ Course → Year Level → Section academic structure</div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">Next.js 14</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">Supabase</span>
-            <span class="tag">Tailwind CSS</span>
-            <span class="tag">PostgreSQL</span>
-            <span class="tag">Vercel</span>
-          </div>
-        </div>
-
-        <!-- TaskFlow -->
-        <div class="project-card featured">
-          <div class="project-header">
-            <div class="project-icon">📋</div>
-            <div class="project-links">
-              <a href="https://task-manager-omega-dun-q6erwfmg3x.vercel.app" target="_blank" class="project-link">Live ↗</a>
-              <a href="https://github.com/Nachiie31/task-manager" target="_blank" class="project-link">GitHub ↗</a>
-            </div>
-          </div>
-          <h3 class="project-name">TaskFlow</h3>
-          <p class="project-desc">A full-stack task management web application with user authentication, priority levels, due dates, categories, and Stripe payment integration for Pro upgrades.</p>
-          <div class="project-highlights">
-            <div class="highlight">✅ 39 automated Playwright tests</div>
-            <div class="highlight">✅ CI/CD with GitHub Actions</div>
-            <div class="highlight">✅ REST API with 4 endpoints</div>
-            <div class="highlight">✅ Supabase database + auth</div>
-            <div class="highlight">✅ Stripe payment integration</div>
-            <div class="highlight">✅ Mobile responsive</div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">Node.js</span>
-            <span class="tag">Express</span>
-            <span class="tag">Supabase</span>
-            <span class="tag">Stripe</span>
-            <span class="tag">Playwright</span>
-            <span class="tag">Vercel</span>
-          </div>
-        </div>
-
-        <!-- POS Inventory System -->
-        <div class="project-card">
-          <div class="project-header">
-            <div class="project-icon">🛒</div>
-            <div class="project-links">
-              <a href="https://github.com/Nachiie31/Capstone-Project-POS-with-Inventory-System" target="_blank" class="project-link">GitHub ↗</a>
-            </div>
-          </div>
-          <h3 class="project-name">Point-Of-Sale with Inventory System</h3>
-          <p class="project-desc">A Point of Sale and Inventory Management System developed as a capstone project. Helps small businesses manage sales transactions, track inventory, and generate basic sales reports.</p>
-          <div class="project-highlights">
-            <div class="highlight">✅ Product management (CRUD)</div>
-            <div class="highlight">✅ Inventory tracking</div>
-            <div class="highlight">✅ Sales transactions & POS</div>
-            <div class="highlight">✅ User login system</div>
-            <div class="highlight">✅ Sales summary reports</div>
-            <div class="highlight">✅ Installer version included</div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">VB.NET</span>
-            <span class="tag">SQLite</span>
-            <span class="tag">Visual Studio</span>
-            <span class="tag">Capstone Project</span>
-          </div>
-        </div>
-
-        <!-- Coming soon -->
-        <div class="project-card coming-soon">
-          <div class="project-header">
-            <div class="project-icon">🚀</div>
-          </div>
-          <h3 class="project-name">Next Project</h3>
-          <p class="project-desc">Currently learning C# and ASP.NET Core. Next project will be built with a C# backend and Azure SQL database.</p>
-          <div class="project-tags">
-            <span class="tag">C#</span>
-            <span class="tag">ASP.NET Core</span>
-            <span class="tag">Azure SQL</span>
-            <span class="tag">Coming soon</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="contact" id="contact">
-    <div class="section-inner">
-      <p class="section-label">Contact</p>
-      <h2 class="section-title">Get in touch</h2>
-      <p class="contact-sub">Have a project in mind or want to work together? Send me a message and I'll get back to you!</p>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <div class="contact-item">
-            <span class="contact-icon">📧</span>
-            <div>
-              <p class="contact-label">Email</p>
-              <a href="mailto:jonathan.galsim.sarmiento@gmail.com">jonathan.galsim.sarmiento@gmail.com</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <span class="contact-icon">💼</span>
-            <div>
-              <p class="contact-label">LinkedIn</p>
-              <a href="https://www.linkedin.com/in/sarmiento-jonathan-g-3458b527a" target="_blank">sarmiento-jonathan-g</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <span class="contact-icon">🐙</span>
-            <div>
-              <p class="contact-label">GitHub</p>
-              <a href="https://github.com/Nachiie31" target="_blank">Nachiie31</a>
-            </div>
-          </div>
-        </div>
-
-        <form class="contact-form" id="contact-form" action="https://formspree.io/f/mwvzpnae" method="POST">
-          <div class="form-group">
-            <label>Your name</label>
-            <input type="text" name="name" placeholder="John Doe" required/>
-          </div>
-          <div class="form-group">
-            <label>Your email</label>
-            <input type="email" name="email" placeholder="john@example.com" required/>
-          </div>
-          <div class="form-group">
-            <label>Message</label>
-            <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-          </div>
-          <div id="form-status" style="display:none;"></div>
-          <button type="submit" class="btn-primary" id="submit-btn">Send message</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <p class="footer-copy">© 2026 Jonathan Sarmiento. Built with HTML, CSS & JavaScript.</p>
-      <div class="footer-links">
-        <a href="https://github.com/Nachiie31" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/sarmiento-jonathan-g-3458b527a" target="_blank">LinkedIn</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
