@@ -303,3 +303,97 @@ table.tc td.id{font-family:var(--mono); color:var(--accent-deep); font-weight:60
 .tl-date{font-family:var(--mono); font-size:12.5px; color:var(--ink-soft);}
 .tl-role{font-weight:600; font-size:16px; margin-bottom:4px;}
 .tl-org{font-family:var(--mono); font-size:13px; color:var(--accent-deep); margin-bottom:10px;}
+
+/* =========================================================
+   ANIMATION LAYER — added for portfolio redesign
+========================================================= */
+
+/* ---- Scroll progress bar ---- */
+.scroll-progress{
+  position:fixed; top:0; left:0; height:3px; width:0%;
+  background:linear-gradient(90deg, var(--accent), var(--accent-deep));
+  z-index:200; transition:width .1s linear;
+}
+
+/* ---- Cursor glow (desktop only) ---- */
+.cursor-glow{
+  position:fixed; top:0; left:0; width:380px; height:380px; pointer-events:none; z-index:1;
+  border-radius:50%;
+  background:radial-gradient(circle, var(--accent-tint) 0%, transparent 70%);
+  transform:translate(-50%,-50%);
+  will-change:transform;
+  transition:opacity .35s ease, width .3s ease, height .3s ease;
+  opacity:0;
+}
+.cursor-glow.active{opacity:1;}
+.cursor-glow.hover{width:520px; height:520px;}
+@media (hover:none){ .cursor-glow{display:none;} }
+
+/* ---- Drifting blobs behind hero sections ---- */
+.hero, .home-hero{position:relative; overflow:hidden;}
+.hero::before, .hero::after, .home-hero::before, .home-hero::after{
+  content:''; position:absolute; border-radius:50%; filter:blur(70px); opacity:0.30; z-index:0;
+  background:var(--accent); pointer-events:none;
+}
+.hero::before, .home-hero::before{ width:320px; height:320px; top:-140px; left:-110px; animation:driftA 17s ease-in-out infinite; }
+.hero::after, .home-hero::after{ width:260px; height:260px; bottom:-120px; right:6%; background:var(--accent-deep); animation:driftB 21s ease-in-out infinite; }
+.hero > .wrap, .home-hero > .home-hero-grid, .home-hero > .metric-strip, .hero > *{position:relative; z-index:1;}
+@keyframes driftA{ 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(-40px,30px) scale(1.12);} }
+@keyframes driftB{ 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(30px,-20px) scale(1.16);} }
+
+/* ---- Nav link animated underline ---- */
+.nav-links a:not(.pill){position:relative;}
+.nav-links a:not(.pill)::after{
+  content:''; position:absolute; left:0; bottom:-4px; height:2px; width:0; background:var(--accent);
+  transition:width .25s cubic-bezier(.2,.8,.2,1);
+}
+.nav-links a:not(.pill):hover::after{width:100%;}
+.nav-links a.current::after{width:100%;}
+
+/* ---- Reveal upgrade: blur + rise + stagger ---- */
+.reveal{
+  opacity:0; transform:translateY(22px) scale(.98); filter:blur(4px);
+  transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1), filter .7s ease;
+  transition-delay: var(--d, 0ms);
+}
+.reveal.in{opacity:1; transform:translateY(0) scale(1); filter:blur(0);}
+
+/* ---- Tilt-ready cards ---- */
+.path-card, .skill-card, .proj-card, .bug-card, .thru-card{
+  transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease;
+  will-change:transform;
+}
+
+/* ---- Magnetic buttons ---- */
+.btn{transition:transform .2s ease, background .2s ease, color .2s ease; display:inline-flex;}
+
+/* ---- Terminal typewriter lines ---- */
+.termbody .ln{opacity:0; transform:translateX(-8px); transition:opacity .35s ease, transform .35s ease;}
+.termbody .ln.shown{opacity:1; transform:translateX(0);}
+.term-cursor{display:inline-block; width:7px; height:13px; background:var(--accent); margin-left:3px; animation:blink 1s steps(1) infinite; vertical-align:middle;}
+@keyframes blink{ 50%{opacity:0;} }
+
+/* ---- Animated ring glow pulse (QA page) ---- */
+.ring-wrap{position:relative;}
+.ring-wrap::after{
+  content:''; position:absolute; inset:6px; border-radius:50%;
+  box-shadow:0 0 0 0 rgba(47,158,68,0.35); animation:ringPulse 2.4s ease-out infinite;
+}
+@keyframes ringPulse{
+  0%{box-shadow:0 0 0 0 rgba(47,158,68,0.35);}
+  100%{box-shadow:0 0 0 22px rgba(47,158,68,0);}
+}
+
+/* ---- Tabular numerals so counters don't jitter width ---- */
+.num, .n, .pct{font-variant-numeric:tabular-nums;}
+
+/* ---- Hero heading word-reveal spans ---- */
+h1.name span, h1.home-name span{will-change:opacity, transform;}
+
+/* ---- Reduced motion: turn off decorative motion ---- */
+@media (prefers-reduced-motion: reduce){
+  .hero::before, .hero::after, .home-hero::before, .home-hero::after{ animation:none; }
+  .ring-wrap::after{ animation:none; }
+  .cursor-glow{ display:none; }
+  .reveal{ filter:none; transition-delay:0ms; }
+}
